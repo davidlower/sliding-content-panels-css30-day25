@@ -5,10 +5,9 @@
    padding: 0;
 }
 
-html {
+body {
    --p-color: rgba(14, 212, 135, 0.8);
    --s-color: #0cc87f;
-   height: 100%;
 
    font-family: 'Poppins', sans-serif;
    font-size: 16px;
@@ -16,34 +15,43 @@ html {
 }
 
 .wrapper {
-   position: relative;
+   width: 90%;
+   max-width: 950px;
+   margin: 5% auto;
+}
 
-   width: 85%;
-   max-width: 1000px;
-   margin: 10% auto;
+span {
+   font-weight: 400;
+}
+
+h1 {
+   margin: 75px 0;
+
+   font-size: 1rem;
+   font-weight: 200;
 }
 
 .img-container {
    position: relative;
-
    display: inline-block;
    overflow: hidden;
-
-   width: 48%;
-   height: calc( - 4px);
-   margin-right: calc(4% - 4px);
-   margin-bottom: calc(4% - 4px);
+   font-size: 0;
+   width: 47%;
+   max-width: 450px;
+   margin-right: 4%;
+   margin-bottom: 5%;
 
    cursor: pointer;
 }
 
 .img-container img {
    width: 100%;
+   max-width: 450px;
    height: auto;
 }
 
-.img-container:nth-child(even) {
-   margin-right: -4px;
+.img-container:nth-child(odd) {
+   margin-right: 0;
 }
 
 /* OVERLAYS */
@@ -54,8 +62,7 @@ html {
    left: 0;
 
    width: 100%;
-   height: calc(100% - 4px);
-
+   height: 100%;
    -webkit-transition: -webkit-transform 0.3s ease;
    transition: -webkit-transform 0.3s ease;
    transition: transform 0.3s ease;
@@ -67,7 +74,7 @@ html {
 .overlay p {
    position: absolute;
    top: 50%;
-
+   font-size: 1rem;
    display: block;
 
    width: 100%;
@@ -109,5 +116,20 @@ html {
 @media screen and (max-width: 800px) {
    .img-container {
       width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+      margin-bottom: 5%;
+      display: block;
+   }
+
+   .img-container:nth-child(odd) {
+      margin: 0 auto;
+      margin-bottom: 5%;
+   }
+
+   h1 {
+      margin: 30px auto;
+      width: 100%;
+      max-width: 450px;
    }
 }
